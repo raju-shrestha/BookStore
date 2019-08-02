@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DBConnection {
-    Connection con = null;
+    Connection connection = null;
     private  String DB_URL ="jdbc:mysql://localhost:3306/bookstore";
     private  String DB_USER ="root";
     private  String DB_PASSWORD ="";
@@ -19,27 +19,27 @@ public class DBConnection {
     public Connection getConnection(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+            connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return con;
+        return connection;
     }
 
     /**
      * Method to close the connection
-     * @param con
+     * @param connection
      */
-    public void closeConnection(Connection con){
+    public void closeConnection(Connection connection){
         try {
-            con.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public static void main(String[] args) {
+/*    public static void main(String[] args) {
         DBConnection dbConnection = new DBConnection();
 
             if(dbConnection.getConnection()!=null){
@@ -49,5 +49,5 @@ public class DBConnection {
                 System.out.println("Opps!!! Some Error Occurred!!! \n");
             }
         System.out.println("new SimpleDateFormat(\"yyyy-MM-dd\").format(new Date()) = " + new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
-    }
+    }*/
 }

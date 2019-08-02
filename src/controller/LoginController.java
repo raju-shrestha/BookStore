@@ -1,6 +1,7 @@
 package controller;
 
+public class LoginController {
 
-public class LoginController{
-    
+
+
 }

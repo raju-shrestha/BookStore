@@ -11,19 +11,18 @@
     <title>Login Form</title>
     </head>
     <body>
-        <form action="/login">
+        <form action="/login" method="post">
+            $(message)
             <fieldset>
                 <legend>Login </legend>
-                    <div class="form-group">
-                        <label for="email">Email address:</label>
-                        <input type="email" class="form-control" id="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" id="pwd">
-                    </div>
+                    Username:
+                        <input type="text" class="form-control" id="username"><br>
 
-                    <button type="submit" class="btn btn-default">Submit</button>
+                   Password:
+                        <input type="password" class="form-control" name="password"><br>
+
+
+                    <button type="submit" value="Login">Submit</button>
             </fieldset>
         </form>
     </body>
